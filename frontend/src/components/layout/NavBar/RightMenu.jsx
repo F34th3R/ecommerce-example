@@ -1,8 +1,9 @@
 import React from 'react'
+import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { Menu, Icon, Badge } from 'antd'
+import { Menu, Badge, Icon } from 'antd'
 
 import { API } from '../../../constans/API.routes'
 
@@ -25,7 +26,7 @@ export const RightMenu = ({ mode }) => {
 
   if (user.userData && !user.userData.isAuth) {
     return (
-      <Menu mode={props.mode}>
+      <Menu mode={mode}>
         <Menu.Item key="mail">
           <a href="/login">Signin</a>
         </Menu.Item>
@@ -36,7 +37,7 @@ export const RightMenu = ({ mode }) => {
     )
   } else {
     return (
-      <Menu mode={props.mode}>
+      <Menu mode={mode}>
         <Menu.Item key="history">
           <a href="/history">History</a>
         </Menu.Item>
@@ -48,10 +49,10 @@ export const RightMenu = ({ mode }) => {
         <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
           <Badge count={user.userData && user.userData.cart.length}>
             <a href="/user/cart" style={{ marginRight: -22, color: '#667777' }}>
-              <Icon
+              {/* <Icon
                 type="shopping-cart"
                 style={{ fontSize: 30, marginBottom: 3 }}
-              />
+              /> */}
             </a>
           </Badge>
         </Menu.Item>

@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
 import { LeftMenu } from './LeftMenu'
 import { RightMenu } from './RightMenu'
-import { Drawer, Button, Icon } from 'antd'
-import { Menu, MenuLogo } from './NavBarStyles'
+
+import { Drawer, Button } from 'antd'
+import { AlignRightOutlined } from '@ant-design/icons'
+import {
+  Menu,
+  MenuLogo,
+  MenuContainer,
+  MenuLeft,
+  MenuRigth
+} from './NavBarStyles'
 import './Navbar.scss'
 
 export const NavBar = () => {
@@ -17,18 +25,18 @@ export const NavBar = () => {
         <a href="#">LOGO</a>
       </MenuLogo>
       <MenuContainer>
-        <MenuLeft>
+        <MenuLeft className="menu_left">
           <LeftMenu mode="horizontal" />
         </MenuLeft>
-        <MenuRigth>
-          <RigthMenu mode="horizontal" />
+        <MenuRigth className="menu_rigth">
+          {/* <RightMenu mode="horizontal" /> */}
         </MenuRigth>
         <Button
           className="menu__mobile-button"
           type="primary"
           onClick={showDrawer}
         >
-          <Icon type="align-right" />
+          <AlignRightOutlined />
         </Button>
         <Drawer
           title="Basic Drawer"
@@ -39,7 +47,7 @@ export const NavBar = () => {
           visible={visible}
         >
           <LeftMenu mode="inline" />
-          <RightMenu mode="inline" />
+          {/* <RightMenu mode="inline" /> */}
         </Drawer>
       </MenuContainer>
     </Menu>

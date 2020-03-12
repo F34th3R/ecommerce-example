@@ -6,13 +6,14 @@ export const Menu = styled.nav`
   overflow: auto;
   box-shadow: 0 0 30px #f3f1f1;
   background-color: white;
+  display: flex;
   position: ${props => props.position};
   z-index: ${props => props.zIndex};
   width: ${props => props.width};
 `
 
 export const MenuLogo = styled.div`
-  width: 100%;
+  width: 150px;
   float: left;
   a {
     display: inline-block;
@@ -59,4 +60,12 @@ export const MenuContainer = styled.div`
       padding: 1px 20px;
     }
   }
+`
+
+export const MenuLeft = styled.div`
+  float: left;
+`
+
+export const MenuRigth = styled.div`
+  float: right;
 `
