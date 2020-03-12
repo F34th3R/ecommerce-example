@@ -22,9 +22,9 @@ app.use(
 )
 
 // Routes
-import projectRoutes from '@root/routes/projects'
+import route from '@root/routes/route'
 
-app.use('/api/projects', projectRoutes)
+app.use('/api/projects', route)
 
 app.use((err, req, res, next) => {
   return res.status(500).json({
