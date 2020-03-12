@@ -1,0 +1,23 @@
+{
+  "name": "ecommerce-example",
+  "version": "1.0.0",
+  "description": "just an example of ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "ibackend": "cd ./backend/ && npm i",
+    "ifrontend": "cd ./frontend/ && npm i && npm audit fix", 
+    "server": "cd ./backend/ && npm run dev",
+    "client": "cd ./frontend/ && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/F34th3R/ecommerce-example.git"
+  },
+  "keywords": [],
+  "author": "F34th3R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/F34th3R/ecommerce-example/issues"
+  },
+  "homepage": "https://github.com/F34th3R/ecommerce-example#readme"
+}
