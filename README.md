@@ -1,6 +1,28 @@
 # Ecommerce Example!!
 
-## File estructure
+## Scripts ⌨
+
+### Backend 🖥
+
+```bash
+# install dependencies
+$ npm run ibackend
+
+# run server!
+$ npm run server
+```
+
+### Frontend 💻
+
+```bash
+# install dependencies
+$ npm ifrontend
+
+# run client side
+$ npm run client
+```
+
+## File structure 🌲
 ```bash
 .
 ├── backend
