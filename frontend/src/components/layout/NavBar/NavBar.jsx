@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { LeftMenu } from './LeftMenu'
-import { RightMenu } from './RightMenu'
+import { LeftMenu, RightMenu } from './Sections'
 
 import { Drawer, Button } from 'antd'
 import { AlignRightOutlined } from '@ant-design/icons'
@@ -10,8 +9,8 @@ import {
   MenuContainer,
   MenuLeft,
   MenuRigth
-} from './NavBarStyles'
-import './Navbar.scss'
+} from './style/NavBarStyles'
+import './style/Navbar.scss'
 
 export const NavBar = () => {
   const [visible, setVisible] = useState(false)
@@ -29,7 +28,7 @@ export const NavBar = () => {
           <LeftMenu mode="horizontal" />
         </MenuLeft>
         <MenuRigth className="menu_rigth">
-          {/* <RightMenu mode="horizontal" /> */}
+          <RightMenu mode="horizontal" />
         </MenuRigth>
         <Button
           className="menu__mobile-button"

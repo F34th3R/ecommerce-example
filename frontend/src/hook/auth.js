@@ -9,20 +9,21 @@ export default function(ComposedClass, reload, adminRoute = null) {
     const dispatch = useDispatch()
 
     useEffect(async () => {
-      const response = await dispatch(auth())
-      if (!response.payload.isAuth) {
-        if (reload) {
-          props.history.push('/login')
-        }
-      } else {
-        if (adminRoute && !response.payload.isAdmin) {
-          props.history.push('/')
+      dispatch(auth()).then(async response => {
+        if (await !response.payload.isAuth) {
+          if (reload) {
+            props.history.push('/login')
+          }
         } else {
-          if (reload === false) {
+          if (adminRoute && !response.payload.isAdmin) {
             props.history.push('/')
+          } else {
+            if (reload === false) {
+              props.history.push('/')
+            }
           }
         }
-      }
+      })
     }, [dispatch, props.history, user.googleAuth])
     return <ComposedClass {...props} user={user} />
   }

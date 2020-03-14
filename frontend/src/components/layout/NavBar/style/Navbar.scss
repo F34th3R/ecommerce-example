@@ -22,4 +22,8 @@
   .menu__mobile-button {
     display: inline-block !important;
   }
+  .menu_left,
+  .menu_rigth {
+    display: none;
+  }
 }

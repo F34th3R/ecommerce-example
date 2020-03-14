@@ -6,7 +6,6 @@ export const Menu = styled.nav`
   overflow: auto;
   box-shadow: 0 0 30px #f3f1f1;
   background-color: white;
-  display: flex;
   position: ${props => props.position};
   z-index: ${props => props.zIndex};
   width: ${props => props.width};
@@ -46,14 +45,6 @@ export const MenuContainer = styled.div`
     border-bottom: none;
   }
 
-  .menu_left {
-    float: left;
-  }
-
-  .menu_rigth {
-    float: right;
-  }
-
   @media (max-width: 767px) {
     .ant-menu-item,
     .ant-menu-submenu-title {
@@ -64,8 +55,14 @@ export const MenuContainer = styled.div`
 
 export const MenuLeft = styled.div`
   float: left;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `
 
 export const MenuRigth = styled.div`
   float: right;
+  @media (max-width: 767px) {
+    display: none;
+  }
 `

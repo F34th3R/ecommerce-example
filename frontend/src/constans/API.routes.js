@@ -1,4 +1,5 @@
-const BASE_URL = ''
+const BASE_URL = '/api/users'
+export const SERVER_URL = ''
 
 export const API = {
   register: {
