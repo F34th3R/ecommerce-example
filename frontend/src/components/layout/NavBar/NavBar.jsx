@@ -46,7 +46,7 @@ export const NavBar = () => {
           visible={visible}
         >
           <LeftMenu mode="inline" />
-          {/* <RightMenu mode="inline" /> */}
+          <RightMenu mode="inline" />
         </Drawer>
       </MenuContainer>
     </Menu>

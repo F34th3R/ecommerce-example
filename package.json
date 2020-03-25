@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "ibackend": "cd ./backend/ && npm i",
-    "ifrontend": "cd ./frontend/ && npm i && npm audit fix", 
+    "ifrontend": "cd ./frontend/ && npm i && npm audit fix",
     "server": "cd ./backend/ && npm run dev",
     "client": "cd ./frontend/ && npm start"
   },
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/F34th3R/ecommerce-example/issues"
   },
-  "homepage": "https://github.com/F34th3R/ecommerce-example#readme"
+  "homepage": "https://github.com/F34th3R/ecommerce-example#readme",
+  "dependencies": {
+    "formik": "^2.1.4",
+    "yup": "^0.28.3"
+  }
 }

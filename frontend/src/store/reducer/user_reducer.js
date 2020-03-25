@@ -9,7 +9,14 @@ import {
   ON_SUCCESS_BUY_USER
 } from '../actions/types'
 
-export const userReducer = (state = {}, action) => {
+const initialState = {
+  userData: {
+    isAuth: false,
+    error: true
+  }
+}
+
+export const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case REGISTER_USER:
       return { ...state, register: action.payload }

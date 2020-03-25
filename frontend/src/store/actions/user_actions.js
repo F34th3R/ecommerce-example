@@ -56,7 +56,8 @@ export const auth = () => {
 
     return {
       type: AUTH_USER,
-      payload: request.data
+      // payload: request.data
+      payload: { userData: { isAuth: false } }
     }
   } catch (e) {
     console.log(`auth: ${e}`)
