@@ -8,7 +8,6 @@ import * as Yup from 'yup'
 import { Form, Input, Button, Checkbox, Typography } from 'antd'
 
 import { useDispatch } from 'react-redux'
-import { LoginContainer } from './style/LoginPageStyles'
 
 const { Title } = Typography
 
@@ -70,7 +69,7 @@ export const LoginPage = ({ props }) => {
       }}
     >
       {props => (
-        <LoginContainer>
+        <div className="app">
           <Title level={2}>Log In</Title>
           <form onSubmit={props.handleSubmit} style={{ width: '350px' }}>
             <Form.Item required>
@@ -154,11 +153,11 @@ export const LoginPage = ({ props }) => {
                 </Button>
               </div>
               <span>
-                Or <a href="/register">register now!</a>
+                Or <a href="/signup">register now!</a>
               </span>
             </Form.Item>
           </form>
-        </LoginContainer>
+        </div>
       )}
     </Formik>
   )

@@ -6,6 +6,7 @@ import { GlobalStyle } from '../styles/GlobalStyle'
 import Auth from '../hook/auth'
 
 import { NavBar, Footer, LandingPage, LoginPage } from './layout'
+import { SignupPage } from './layout/SignupPage/SignupPage'
 
 export const App = () => {
   return (
@@ -15,7 +16,7 @@ export const App = () => {
         <Switch>
           {/* <Route exact path="/" component={Auth(LandingPage, null)} /> */}
           <Route exact path="/login" component={Auth(LoginPage, false)} />
-          {/* <Route exact path="/register" component={Auth(RegisterPage, false)} /> */}
+          <Route exact path="/signup" component={Auth(SignupPage, false)} />
           {/* <Route
             exact
             path="/product/upload"

@@ -15,6 +15,13 @@ export const GlobalStyle = createGlobalStyle`
       monospace;
   }
 
+  .app {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
 
   .App {
   text-align: center;
