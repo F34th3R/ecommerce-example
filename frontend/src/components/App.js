@@ -14,7 +14,7 @@ export const App = () => {
       <NavBar />
       <div style={{ paddingTop: '75px', minHeight: 'calc(100vh - 80px)' }}>
         <Switch>
-          {/* <Route exact path="/" component={Auth(LandingPage, null)} /> */}
+          <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/signup" component={Auth(SignupPage, false)} />
           {/* <Route

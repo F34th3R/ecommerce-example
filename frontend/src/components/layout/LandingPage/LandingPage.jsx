@@ -39,23 +39,19 @@ export const LandingPage = () => {
   }, [])
 
   const getProducts = async variables => {
-    try {
-      const response = await Axios({
-        method: 'POST',
-        url: '/api/product/getProducts',
-        data: variables
-      })
-      if (response.data.success) {
-        if (variables.loadMore) {
-          setProducts([...getProducts, ...(await response).data.products])
-        } else {
-          setProducts(response.data.products)
-        }
-        setPostSize(response.data.postSize)
+    const response = await Axios({
+      method: 'POST',
+      url: '/api/product/getProducts',
+      data: variables
+    })
+    if (response.data.success) {
+      if (variables.loadMore) {
+        setProducts([...getProducts, ...(await response).data.products])
       } else {
-        alert('Failed to fectch product datas')
+        setProducts(response.data.products)
       }
-    } catch (e) {
+      setPostSize(response.data.postSize)
+    } else {
       alert('Failed to fectch product datas')
     }
   }
@@ -92,7 +88,7 @@ export const LandingPage = () => {
     return array
   }
 
-  const hanldeFilters = (filter, category) => {
+  const handleFilters = (filter, category) => {
     const newFilters = { ...filters }
 
     newFilters[category] = filter
@@ -146,13 +142,13 @@ export const LandingPage = () => {
         <Col lg={12} xs={24}>
           <CheckBox
             list={continents}
-            hanldeFilters={filter => hanldeFilters(filter, 'continents')}
+            handleFilters={filter => handleFilters(filter, 'continents')}
           />
         </Col>
         <Col lg={12} xs={24}>
           <RadioBox
             list={price}
-            hanldeFilters={filter => hanldeFilters(filter, 'price')}
+            handleFilters={filter => handleFilters(filter, 'price')}
           />
         </Col>
       </Row>
