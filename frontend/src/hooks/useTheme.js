@@ -7,7 +7,8 @@ export const useTheme = () => {
     ziggurat: '#84A9AC',
     grannyApple: '#CAE8D5',
     white: '#E1E1E1',
-    dark: '#222831'
+    dark: '#333333',
+    superDark: '#212121'
   })
   const [colors, setColors] = useState({
     white: defaultColors.white,
@@ -21,11 +22,12 @@ export const useTheme = () => {
   useEffect(() => {
     if (darkMode) {
       setColors({
-        white: defaultColors.dark,
+        white: defaultColors.superDark,
         dark: defaultColors.white,
         primary: defaultColors.ming,
         secondary: defaultColors.astronautBlue,
-        light: defaultColors.grannyApple
+        light: defaultColors.grannyApple,
+        text: defaultColors.white
       })
     } else {
       setColors({
@@ -33,7 +35,8 @@ export const useTheme = () => {
         dark: defaultColors.dark,
         primary: defaultColors.ming,
         secondary: defaultColors.astronautBlue,
-        light: defaultColors.grannyApple
+        light: defaultColors.grannyApple,
+        text: defaultColors.dark
       })
     }
   }, [
@@ -42,6 +45,7 @@ export const useTheme = () => {
     defaultColors.dark,
     defaultColors.grannyApple,
     defaultColors.ming,
+    defaultColors.superDark,
     defaultColors.white
   ])
 

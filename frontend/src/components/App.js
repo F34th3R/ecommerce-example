@@ -3,6 +3,7 @@ import React from 'react'
 import { GlobalStyle } from '../styles/GlobalStyle'
 import { Navigation } from './layout'
 import { useThemeValues } from '../context/ThemeContext'
+import { Button } from '@material-ui/core'
 
 export const App = () => {
   const { setDarkMode } = useThemeValues()
@@ -10,7 +11,7 @@ export const App = () => {
     <>
       <Navigation />
       <h1>app</h1>
-      <button onClick={() => setDarkMode(prev => !prev)}>Change</button>
+      <Button onClick={() => setDarkMode(prev => !prev)}>Change</Button>
       <GlobalStyle />
     </>
   )
