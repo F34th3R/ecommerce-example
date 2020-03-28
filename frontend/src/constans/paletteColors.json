@@ -1,0 +1,17 @@
+{
+  "dark": {
+    "BlackPearl": "#222831",
+    "Arsenic": "#393E46",
+    "DarkCerulean": "#0F4C75"
+  },
+  "light": {
+    "CuriousBlue": "#3282B8",
+    "ColumbiaBlue": "#bbe1fa",
+    "WhiteSmoke": "#f7f7f7"
+  },
+  "accent": {},
+  "common": {
+    "white": "#FFF",
+    "black": "#000"
+  }
+}

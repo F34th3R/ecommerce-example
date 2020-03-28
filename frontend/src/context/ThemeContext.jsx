@@ -1,43 +1,23 @@
 import React, { createContext, useContext } from 'react'
 import { ThemeProvider as ThemeProviderStyled } from 'styled-components'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { MuiThemeProvider } from '@material-ui/core/styles'
 
 import { useTheme } from '../hooks/useTheme'
 
 export const ThemeContext = createContext()
 
 export const ThemeProvider = ({ children }) => {
-  const { darkMode, setDarkMode, colors } = useTheme()
-
-  const MaterialTheme = createMuiTheme({
-    palette: {
-      type: darkMode ? 'dark' : 'light',
-      primary: {
-        main: colors.primary
-      },
-      secondary: {
-        main: colors.secondary
-      },
-      action: {
-        main: colors.light
-      },
-      common: {
-        white: colors.white,
-        black: colors.dark
-      }
-    }
-  })
+  const { darkMode, setDarkMode, colors, material } = useTheme()
 
   return (
     <ThemeContext.Provider
       value={{
         darkMode,
-        setDarkMode,
-        colors
+        setDarkMode
       }}
     >
       <ThemeProviderStyled theme={colors}>
-        <MuiThemeProvider theme={MaterialTheme}>{children}</MuiThemeProvider>
+        <MuiThemeProvider theme={material}>{children}</MuiThemeProvider>
       </ThemeProviderStyled>
     </ThemeContext.Provider>
   )
