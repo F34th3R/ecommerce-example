@@ -1,15 +1,16 @@
 import React from 'react'
 
 import { MenuLRContainer, MenuItem } from '../style/NavigationStyled'
+import { LinkComponent } from '../../../shared'
 
 export const MenuLeft = () => {
   return (
     <MenuLRContainer>
       <MenuItem>
-        <span>Home</span>
+        <LinkComponent to="home">Home</LinkComponent>
       </MenuItem>
       <MenuItem>
-        <span>Blogs</span>
+        <LinkComponent to="blogs">Blogs</LinkComponent>
       </MenuItem>
     </MenuLRContainer>
   )

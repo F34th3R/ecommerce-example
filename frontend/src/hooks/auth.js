@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
-import { auth } from '../store/actions/user_actions'
+// import { auth } from '../store/actions/user_actions'
 
-import { useSelector, useDispatch } from 'react-redux'
+// import { useSelector, useDispatch } from 'react-redux'
 
 export default function(ComposedClass, reload, adminRoute = null) {
   function AuthenticationCheck(props) {
-    let user = useSelector(state => state.user)
-    const dispatch = useDispatch()
+    // let user = useSelector(state => state.user)
+    // const dispatch = useDispatch()
 
     const fetchData = async () => {
       // const response = await dispatch(auth())

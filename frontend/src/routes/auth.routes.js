@@ -1,17 +1,14 @@
-export const AuthRoutes = {
-  signin: {
+export const AUTH_ROUTES = [
+  {
     name: 'sign in',
     path: '/sing_in',
-    component: ''
+    component: '',
+    auth: false
   },
-  singup: {
-    name: 'sing up',
-    path: '/sing_in',
-    component: ''
-  },
-  home: {
-    name: 'home',
-    path: '/',
-    component: ''
+  {
+    name: 'sign up',
+    path: '/sing_up',
+    component: '',
+    auth: false
   }
-}
+]
