@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { MenuLeft } from './sections/MenuLeft'
-import { MenuRigth } from './sections/MenuRigth'
+import { MenuLeft, MenuRigth } from './sections'
+
 import {
   Nav,
   MenuLogo,

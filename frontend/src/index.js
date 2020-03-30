@@ -2,16 +2,17 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+import 'typeface-roboto'
 import { App } from './components/App'
-import { ThemeProvider } from './context/ThemeContext'
+import { CoreProvider } from './context/CoreContext'
 // import * as serviceWorker from './serviceWorker'
 
 render(
-  <ThemeProvider>
+  <CoreProvider>
     <Router>
       <App />
     </Router>
-  </ThemeProvider>,
+  </CoreProvider>,
   document.getElementById('root')
 )
 

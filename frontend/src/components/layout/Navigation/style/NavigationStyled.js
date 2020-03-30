@@ -37,6 +37,7 @@ export const MenuContainer = styled.div`
 
 export const MenuLRContainer = styled.div`
   display: flex;
+  float: right;
   flex-flow: row;
   height: 100%;
 `
