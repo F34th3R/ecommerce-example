@@ -5,7 +5,7 @@ import { Navigation } from './layout'
 import { useThemeValues } from '../context/ThemeContext'
 import { Button } from '@material-ui/core'
 import { Container } from './shared'
-import { LandingPage } from './pages'
+import { RouterHelper } from '../helpers/RouterHelper'
 
 export const App = () => {
   const { setDarkMode } = useThemeValues()
@@ -13,7 +13,7 @@ export const App = () => {
     <>
       <Navigation />
       <Container>
-        <LandingPage />
+        <RouterHelper />
         <Button onClick={() => setDarkMode(prev => !prev)}>Change</Button>
       </Container>
       <GlobalStyle />

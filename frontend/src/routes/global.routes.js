@@ -1,8 +1,9 @@
+import { LandingPage } from '../components/pages'
 export const GLOBAL_ROUTES = [
   {
     name: 'home',
     path: '/',
-    component: '',
+    component: LandingPage,
     auth: false
   },
   {

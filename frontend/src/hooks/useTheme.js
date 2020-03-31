@@ -4,10 +4,13 @@ import { createMuiTheme } from '@material-ui/core'
 const paletteColors = {
   blackPearl: '#222831',
   blackRock: '#2D333D',
+  arsenic: '#3D424A',
   manate: '#929aab',
+  gainsboro: '#D9D9D9',
   solitude: '#EDEEF0',
   whiteSmoke: '#f7f7f7',
-  java: '#29a19c'
+  java: '#29a19c',
+  cerise: '#d7385e'
 }
 
 const c = {
@@ -30,7 +33,16 @@ const light = {
   },
   text: {
     main: paletteColors.blackPearl,
-    grey: paletteColors.manate
+    grey: paletteColors.manate,
+    error: paletteColors.cerise
+  },
+  primary: {
+    main: paletteColors.java,
+    text: paletteColors.whiteSmoke
+  },
+  disable: {
+    main: paletteColors.gainsboro,
+    text: paletteColors.manate
   },
   background: paletteColors.whiteSmoke,
   accent: paletteColors.java,
@@ -44,7 +56,16 @@ const dark = {
   },
   text: {
     main: paletteColors.whiteSmoke,
-    grey: paletteColors.manate
+    grey: paletteColors.manate,
+    error: paletteColors.gainsboro
+  },
+  primary: {
+    main: paletteColors.java,
+    text: paletteColors.whiteSmoke
+  },
+  disable: {
+    main: paletteColors.arsenic,
+    text: paletteColors.manate
   },
   background: paletteColors.blackPearl,
   accent: paletteColors.java,
@@ -53,7 +74,7 @@ const dark = {
 }
 
 export const useTheme = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(true)
   const [colors, setColors] = useState(light)
   const material = useMemo(
     () =>

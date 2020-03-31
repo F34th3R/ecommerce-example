@@ -6,8 +6,7 @@ import { useSidebarValues } from '../../../context/SidebarContext'
 
 export const LandingPage = () => {
   const { priceSelected, contrySelected } = useSidebarValues()
-  console.table(contrySelected)
-  console.table(priceSelected)
+
   return (
     <LandingContainer>
       <Sidebar />
@@ -16,6 +15,10 @@ export const LandingPage = () => {
           Let's Travel Anywhere
         </Typography>
         <Box height="20px" />
+        <Box height="50px" />
+        <Typography gutterBottom align="center">
+          No post yet...!
+        </Typography>
       </LandingMain>
     </LandingContainer>
   )

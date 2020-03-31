@@ -4,7 +4,7 @@ export const NavigationContainer = styled.div`
   height: ${p => p.theme.c.navigation.h};
   width: 100%;
   background: ${p => p.theme.background};
-  color: ${p => p.theme.text};
+  color: ${p => p.theme.text.main};
   box-shadow: ${p => p.theme.c.shadow.main};
 `
 

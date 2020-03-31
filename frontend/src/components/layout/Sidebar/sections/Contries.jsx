@@ -23,14 +23,15 @@ export const Contries = ({ list }) => {
       newCheck.splice(currentIndex, 1)
     }
     setCheck(newCheck)
-    setContrySelected(newCheck)
+    // TODO: pass the obj of contries
+    setContrySelected(newCheck.length)
   }
 
   return (
     <>
       <Box height="30px" />
       <FormControl>
-        <FormLabel component="legend">Countries</FormLabel>
+        <FormLabel component="legend">Contries</FormLabel>
         <FormGroup>
           {list &&
             list.map(({ id, name }) => (
