@@ -11,5 +11,21 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background: ${props => props.theme.background};
     color: ${props => props.theme.text.main};
+  
+    overflow: scroll;
+    overflow: -moz-scrollbars-vertical;
+    &::-webkit-scrollbar {
+      background: ${props => props.theme.common.white};
+      opacity: 0.5;
+      width: 12px;
+      /* display: none; */
+    }
+    /* &::-webkit-scrollbar-track {
+      background: ${props => props.theme.common.white};
+    } */
+    &::-webkit-scrollbar-thumb {
+      background: ${props => props.theme.disable.main};
+      border-radius: 3px;
+    }
   }
 `
