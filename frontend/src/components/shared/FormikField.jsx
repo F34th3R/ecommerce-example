@@ -12,7 +12,7 @@ export const FormikField = ({
   name,
   label,
   type = 'text',
-  required = false
+  required = true
 }) => {
   return (
     <FieldConteiner>

@@ -17,11 +17,13 @@ export const LinkComponent = ({ children, to }) => {
 
   const searchHandler = useCallback(() => {
     return (
-      ROUTES.filter(route => {
+      to &&
+      (ROUTES.filter(route => {
         return route['name'].toLowerCase().indexOf(to.toLowerCase()) !== -1
-      })[0] || false
+      })[0] ||
+        result.path)
     )
-  }, [to])
+  }, [result, to])
 
   useEffect(() => {
     if (searchHandler()) {

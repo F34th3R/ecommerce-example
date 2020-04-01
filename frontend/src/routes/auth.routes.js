@@ -12,5 +12,11 @@ export const AUTH_ROUTES = [
     path: '/sing_up',
     component: SignUp,
     auth: false
+  },
+  {
+    name: 'forgot password',
+    path: '/forgot_password',
+    component: SignUp,
+    auth: false
   }
 ]
