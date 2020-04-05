@@ -1,7 +1,8 @@
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import Axios from 'axios'
 
 export const useAxios = axiosData => {
+  const isCurrent = useRef(true)
   const [refetch, setRefetch] = useState(true)
   const [state, setState] = useState({
     data: null,
@@ -25,8 +26,16 @@ export const useAxios = axiosData => {
   }, [axiosData.body, axiosData.method, axiosData.url])
 
   useEffect(() => {
-    if (refetch) {
-      fetchData()
+    return () => {
+      isCurrent.current = false
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isCurrent.current) {
+      if (refetch) {
+        fetchData()
+      }
     }
   }, [refetch, fetchData])
 

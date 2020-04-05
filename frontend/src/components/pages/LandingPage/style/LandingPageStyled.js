@@ -16,6 +16,13 @@ export const LandingContainer = styled.div`
   }
 `
 
+export const LandingBodyContainer = styled.div`
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+`
+
 export const LandingMain = styled.div`
   display: flex;
   flex-flow: column;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { LandingContainer, LandingMain } from './style/LandingPageStyled'
+import { LandingBody } from './sections'
 import { Typography, Box } from '@material-ui/core'
 import { Sidebar } from '../../layout/Sidebar/Sidebar'
 import { useSidebarValues } from '../../../context/SidebarContext'
@@ -14,8 +15,8 @@ export const LandingPage = () => {
     body: JSON.stringify({
       title: 'foo',
       body: 'bar',
-      userId: 1
-    })
+      userId: 1,
+    }),
   })
 
   return (
@@ -30,8 +31,7 @@ export const LandingPage = () => {
         <Typography gutterBottom align="center" onClick={() => refetch(true)}>
           No post yet...!
         </Typography>
-        {/* {JSON.stringify(data)} */}
-        {loading ? 'loading...' : JSON.stringify(data)}
+        <LandingBody />
       </LandingMain>
     </LandingContainer>
   )
