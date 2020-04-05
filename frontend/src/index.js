@@ -2,17 +2,17 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+import 'typeface-roboto'
 import { App } from './components/App'
-import { Provider } from 'react-redux'
-import { store } from './store'
+import { CoreProvider } from './context/CoreContext'
 // import * as serviceWorker from './serviceWorker'
 
 render(
-  <Provider store={store}>
+  <CoreProvider>
     <Router>
       <App />
     </Router>
-  </Provider>,
+  </CoreProvider>,
   document.getElementById('root')
 )
 
