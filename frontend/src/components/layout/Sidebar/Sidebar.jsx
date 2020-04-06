@@ -4,8 +4,9 @@ import { Box, TextField } from '@material-ui/core'
 import { SidebarContainer } from './style/SidebarStyled'
 import { useSidebarValues } from '../../../context/SidebarContext'
 
-export const Sidebar = () => {
+export const Sidebar = ({ updateSearch }) => {
   const { contries, prices } = useSidebarValues()
+
   return (
     <SidebarContainer>
       <Box height="42.4px" />
@@ -15,6 +16,7 @@ export const Sidebar = () => {
         placeholder="search"
         size="small"
         fullWidth
+        onChange={(e) => updateSearch(e.target.value)}
       />
       <Contries list={contries} />
       <Prices list={prices} />

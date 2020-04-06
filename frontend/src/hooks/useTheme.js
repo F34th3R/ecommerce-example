@@ -16,7 +16,7 @@ const paletteColors = {
 const c = {
   padding: '18px',
   container: {
-    w: '1020px'
+    w: '1200px'
   },
   navigation: {
     h: '66px'
